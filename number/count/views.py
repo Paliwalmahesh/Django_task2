@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+#from .models import user
 
+
+def home(request):
+     return render(request,'count/base.html')
 
 def num(request):
 	 return render(request,'count/num.html')
@@ -23,6 +27,8 @@ def counting(request):
         return render(request,'count/result.html',context)
     else:
        return HttpResponse('<p> First number should be less than last number </p>')
+
+
 
 
 	
